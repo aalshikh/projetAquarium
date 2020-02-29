@@ -1,0 +1,46 @@
+.carousel-item .texte {
+    /* position: relative; */
+    /* padding-left: calc(25rem);
+    padding-top: calc(15rem); */
+    border: solid;
+    border-color: gold;
+    text-align: center;
+    width:280px;
+    height:280px;
+    border-radius:20%;
+    /* letter-spacing: .035em; */
+    /* text-shadow: 0 2px 15px */
+    /* rgba(0,15,47,.6); */
+    /* position:absolute; */
+    top:2em;
+    color:white;
+    font-size:3em;
+    font-family: cursive;
+    /* width:692px;      même largeur que l’image */
+  }
+
+.carousel-inner {
+    overflow: hidden;
+}
+
+.carousel-item {
+    margin-left: 20px;
+}
+
+
+.biome {
+    margin-top: 10%;
+    background: url(/assets/image/Ammonit.jpg);
+    background-size: 100%;
+    
+}
+
+.listebiome {
+    margin-top: 10%;
+}
+
+/* .descriptionslide {
+    position: absolute;
+    margin-left: 80%;
+    margin-bottom: 50px;
+} */

@@ -1,0 +1,76 @@
+<br>
+<p scope="col" style="text-shadow:0 0 2px #ff1c1ce5,0 0 30px #ff1c1ce5,0px 0px 5px #ff1c1ce5, 0 0 150px #ff1c1ce5;color:#ff1c1ce5;
+text-align: center; font-size: 25px;">Nos especes</p>
+<div class="scrolling-wrapper">
+  <a *ngFor="let a of especeAnimalPresente" class="animated-button1" (click)="changeEspeceChoisi(a);">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    {{a}}
+  </a>
+</div>
+<!-- <table>
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Nos especes</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let a of especeAnimalPresente">
+        <td>
+          <a class="animated-button1" (click)="changeEspeceChoisi(a);">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            {{a}}
+          </a>
+        </td>
+      </tr>
+    </tbody>
+</table> -->
+
+<!-- <table class="table" style="color:white">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Espece</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Sexe</th>
+        <th scope="col">Signe distinctif</th>
+        <th scope="col">Bilan de sante</th>
+        <th scope="col">Date arrivee</th>
+        <th scope="col">Date depart</th>
+        <th scope="col">Taille</th>
+        <th scope="col">Age</th>
+        <th scope="col">Bassin d'appartenance</th>
+        <th scope="col">supprimer</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of animaux">
+          <th scope="row">{{a.id}}</th>
+          <td>{{a.espece}}</td>
+          <td>{{a.nom}}</td>
+          <td>{{a.sexe}}</td>
+          <td>{{a.signeDistinctif}}</td>
+          <td>{{a.bilanSante}}</td>
+          <td>{{a.dateArr}}</td>
+          <td>{{a.dateDep}}</td>
+          <td>{{a.taille}}</td>
+          <td>{{a.age}}</td>
+          <td>{{a.bassin.id}}</td>
+          <td>
+            <button class="bouton17" (click)="supprimerAnimal(a.id)">
+              Supprimer
+            </button></td>
+          <td></td>
+        </tr>
+      </tbody>
+</table> -->
+
+<br>
+<app-animalespece [animaux]=retourneAnimal() [nomEspece]=retourneEspece()></app-animalespece>
+<br>

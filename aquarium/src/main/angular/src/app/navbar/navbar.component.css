@@ -1,0 +1,108 @@
+nav.menu {
+    font-family: verdana;
+    font-size: 18px;
+}
+
+/*
+ * on s'occupe ici des dimension du menu
+ */
+nav.menu ul {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin:0;
+    list-style-type: none; /* pour enlever les asterix devant les menu pour de l'esthetique */
+}
+
+/*
+ * ici on design les sous menu
+ */
+nav.menu ul li {
+    width: 250px; /* taille des case */
+    box-sizing: border-box; /*  le padding et la bordure n'augmentent plus la largeur de l'element*/
+    height: 60px;
+    padding:20px 0px;
+    background-color: #EEE; /* on met la couleur gris */
+    text-align: center; /* on aligne le text */
+    border: 1px solid black; /* on met des bordure noir */
+    margin: 20px;
+}
+
+nav.menu ul.inline > li {
+    /* float: left; */
+    display: inline-flex;
+    background-image: url(/assets/image/dolphin-logo.png); /*you might need to change the url*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000f2f;
+    border-color: darkgray;
+    /* border-bottom: none; */
+}
+
+nav.menu ul.list > li {
+    width: 251px;
+    float: none;
+    border: 1px solid black;
+    border-bottom: none;
+}
+
+nav.menu ul.list > li:last-child {
+    border-bottom: 1px solid black; /* on met une bordure noir en bas de la derniere case de la sous list */ 
+}
+
+nav.menu ul ul {
+    display: none; /* pour cacher le sous menu lorsque l'on est pas dessus */
+    position: absolute;
+    top: 60px;
+    left: 0px;
+}
+
+
+/* on va specifier ce quil se passe lors du survol de la souris grace a :hover */
+nav.menu ul li:hover > ul {
+    display: block; /* permet a ce que le sous menu s'affiche en bloc quand on passe la souris dessus */
+}
+
+nav.menu ul li:hover {
+    background-color:teal; /* #EFAE00 met la couleur lors du survol */
+}
+
+hr {
+    width: 100%;
+    height: 2px;
+    margin: 0;
+    border: none;
+    
+    /* ligne de couleur degrader en violet et jaune */
+    background: linear-gradient(90deg,
+        purple 10%, yellow 20%, purple 30%,
+yellow 40%, purple 50%, yellow 60%,
+purple 70%, yellow 80%, purple 90%, yellow 100%);
+}
+
+/* ul.main {padding:0; margin:0; list-style:none; position:absolute; top:80px; left:0; width:100%; min-height:30px; background:#000; text-align:center; z-index:100002; box-shadow:0 3px 6px rgba(0,0,0,0.3); backface-visibility: hidden;}
+ul.main li {display:inline-block;}
+ul.main li {*display:inline;}
+ul.main li.break {display:block; display:none;}
+ul.main li a {display:block; font:normal 15px/26px 'latomedium', arial, sans-serif; color:#fff; text-decoration:none; padding:0 6px; border-bottom:4px solid #000;}
+.home ul.main li#home a {border-color:#09c;}
+.demos ul.main li#demos a {border-color:#e23b2d;}
+.menus ul.main li#menus a {border-color:#ea851d;}
+.layouts ul.main li#layouts a {border-color:#ffc20f;}
+.boxes ul.main li#boxes a {border-color:#7cb447;}
+.mozilla ul.main li#mozilla a {border-color:#1672bb;}
+.explorer ul.main li#explorer a {border-color:#8b37aa;}
+.opacity ul.main li#opacity a {border-color:#9e6ba9;} */
+
+/* ul.main li a:hover {border-color:#888;}
+ul.sub {padding:0; margin:0 0 30px 0; list-style:none; width:100%; min-height:30px; background:#000; text-align:center;}
+ul.sub li {display:inline-block;}
+ul.sub li {*display:inline;}
+ul.sub li a {font:normal 14px/30px 'latomedium', arial, sans-serif; color:#fff; text-decoration:none; padding:0 8px;}
+.design .sub li#design a,
+.faqs .sub li#faqs a,
+.contact .sub li#contact a,
+.privacy .sub li#privacy a,
+.support .sub li#support a {color:#6cf;} */

@@ -1,0 +1,42 @@
+.main-header .navbar-secundary {
+    margin-bottom: 1px;
+}
+
+.navbar-secundary {
+    background-color: 
+#000f2f;
+color:
+    #fff;
+    font-family: DINNCondMedium,sans-serif;
+    font-weight: 500;
+}
+
+header .navbar-secundary .wrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+.main-header .nav {
+    margin: 0;
+    padding: 0;
+    display: block;
+    letter-spacing: -.31em;
+    text-rendering: optimizeSpeed;
+}
+
+
+
+.main-header > .navbar-primary {
+    position: relative;
+}
+
+.main-header .navbar-primary, .main-header .navbar-secundary {
+    background-color: 
+#000f2f;
+color:
+    #fff;
+    font-family: DINNCondMedium,sans-serif;
+    font-weight: 500;
+}

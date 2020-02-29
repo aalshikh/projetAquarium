@@ -1,4 +1,4 @@
-package projet.devops.aquarium.controller;
+package projet.devops.aquarium.web.controller;
 
 import com.fasterxml.jackson.databind.ser.FilterProvider;
 import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;

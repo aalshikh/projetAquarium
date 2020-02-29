@@ -1,4 +1,4 @@
-package projet.devops.aquarium.controller;
+package projet.devops.aquarium.web.controller;
 
 import com.fasterxml.jackson.databind.ser.FilterProvider;
 import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
@@ -6,43 +6,41 @@ import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.json.MappingJacksonValue;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import projet.devops.aquarium.dao.AnimalbookDao;
-import projet.devops.aquarium.model.Animalbook;
+import projet.devops.aquarium.dao.BassinDao;
+import projet.devops.aquarium.model.Bassin;
 
 import java.net.URI;
 import java.util.List;
 
-public class AnimalbookController {
+@RestController
+public class BassinController {
 
     @Autowired
-    private AnimalbookDao animalbookDao;
+    private BassinDao bassinDao;
 
-    //Récupérer les informations sur les especes
-    @RequestMapping(value = "/Animalbooks", method = RequestMethod.GET)
-    public MappingJacksonValue listeAnimalbooks() {
+    //Récupérer les informations sur les bassins
+    @RequestMapping(value = "/Bassins", method = RequestMethod.GET)
+    public MappingJacksonValue listeBassin() {
 
-        List<Animalbook> animalbooks = animalbookDao.findAll();
+        List<Bassin> bassins = bassinDao.findAll();
         SimpleBeanPropertyFilter monFiltre = SimpleBeanPropertyFilter.serializeAllExcept("id");
         FilterProvider listDeNosFiltres = new SimpleFilterProvider().addFilter("monFiltreDynamique", monFiltre);
-        MappingJacksonValue produitsFiltres = new MappingJacksonValue(animalbooks);
+        MappingJacksonValue produitsFiltres = new MappingJacksonValue(bassins);
         produitsFiltres.setFilters(listDeNosFiltres);
         return produitsFiltres;
     }
 
-    @PostMapping(value = "/Animalbooks")
-    public ResponseEntity<Void> ajouterAnimalbook(@RequestBody Animalbook animalbook) {
-        Animalbook animalbookAdded =  animalbookDao.save(animalbook);
-        if (animalbookAdded == null)
+    @PostMapping(value = "/Bassins")
+    public ResponseEntity<Void> ajouterBassin(@RequestBody Bassin bassin) {
+        Bassin bassinAdded =  bassinDao.save(bassin);
+        if (bassinAdded == null)
             return ResponseEntity.noContent().build();
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
                 .path("/{id}")
-                .buildAndExpand(animalbookAdded.getId())
+                .buildAndExpand(bassinAdded.getId())
                 .toUri();
         return ResponseEntity.created(location).build();
     }

@@ -1,0 +1,36 @@
+
+<!-- on a {{nomEspece}}
+et {{listeAnimauxEspece}} -->
+<table class="table" style="color:white">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Espece</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Sexe</th>
+        <th scope="col">Signe distinctif</th>
+        <th scope="col">Bilan de sante</th>
+        <th scope="col">Date arrivee</th>
+        <th scope="col">Date depart</th>
+        <th scope="col">Taille</th>
+        <th scope="col">Age</th>
+        <th scope="col">Bassin</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of listeAnimauxEspece">
+          <th scope="row">{{a.id}}</th>
+          <td>{{a.espece}}</td>
+          <td>{{a.nom}}</td>
+          <td>{{a.sexe}}</td>
+          <td>{{a.signeDistinctif}}</td>
+          <td>{{a.bilanSante}}</td>
+          <td>{{a.dateArr}}</td>
+          <td>{{a.dateDep}}</td>
+          <td>{{a.taille}}</td>
+          <td>{{a.age}}</td>
+          <td>{{a.bassin.nomBassin}}</td>
+        </tr>
+      </tbody>
+</table>
+ok

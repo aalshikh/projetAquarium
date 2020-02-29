@@ -1,0 +1,26 @@
+<br>
+<p scope="col" style="text-shadow:0 0 2px #ff1c1ce5,0 0 30px #ff1c1ce5,0px 0px 5px #ff1c1ce5, 0 0 150px #ff1c1ce5;color:#ff1c1ce5;
+text-align: center; font-size: 25px;">Nos bassins</p>
+<br>
+<table class="table" style="color:white">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nom bassin</th>
+        <th scope="col">Taille maximum</th>
+        <th scope="col">Place utilisée</th>
+        <th scope="col">Dernier netoyage fait</th>
+        <th scope="col">Etat du bassin</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of bassins">
+          <th scope="row">{{a.id}}</th>
+          <td>{{a.nomBassin}}</td>
+          <td>{{a.tailleMax}}</td>
+          <td>{{a.tailleUtilise}}</td>
+          <td>{{a.dernierNetoyage}}</td>
+          <td>{{a.etatBassin}}</td>
+        </tr>
+      </tbody>
+</table>

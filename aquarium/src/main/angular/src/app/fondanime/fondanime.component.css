@@ -1,0 +1,46 @@
+.divtexte {
+    position:absolute;
+    padding-left: calc(25rem);
+    padding-top: calc(18rem);
+  }
+
+.carousel-item .texte {
+    /* position: relative; */
+    /* padding-left: calc(25rem);
+    padding-top: calc(15rem); */
+    border: solid;
+    border-color: gold;
+    text-align: center;
+    width:280px;
+    height:280px;
+    border-radius:20%;
+    /* letter-spacing: .035em; */
+    /* text-shadow: 0 2px 15px */
+    /* rgba(0,15,47,.6); */
+    /* position:absolute; */
+    top:2em;
+    color:white;
+    font-size:3em;
+    font-family: cursive;
+    /* width:692px;      même largeur que l’image */
+  }
+
+  button {
+    width:110px;
+    cursor:pointer;
+    text-transform:capitalize;
+  }
+
+  .bouton17 {
+    width:85px;
+    height:85px;
+    background-image: url(/assets/image/dolphin-logo.png);
+    background-size: 100%;
+    /* background:#fafafa; */
+    box-shadow:2px 2px 8px #e20000;
+    font:bold 13px Arial;
+    border-radius:50%;
+    color:rgb(51, 255, 0);
+  }
+
+  
