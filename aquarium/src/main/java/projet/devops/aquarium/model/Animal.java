@@ -20,7 +20,9 @@ public class Animal {
     private int age;
     //private int bassinAppartenance;
 
-
+    @ManyToOne
+    @JoinColumn
+    private Bassin bassin;
 
     public Animal(int id, String nom, String espece, char sexe, String signeDistinctif, String bilanSante, Date dateArr, Date dateDep, float taille, int age/*, int bassinAppartenance*/) {
         this.id = id;
@@ -63,6 +65,7 @@ public class Animal {
 
     //public int getBassinAppartenance() { return bassinAppartenance; }
 
+    public Bassin getBassin() { return bassin; }
 
     public void setId(int id) { this.id = id; }
 
@@ -86,6 +89,7 @@ public class Animal {
 
     //public void setBassinAppartenance(int bassinAppartenance) { this.bassinAppartenance = bassinAppartenance; }
 
+    public void setBassin(Bassin bassin) { this.bassin = bassin; }
 
     @Override
     public String toString() {
