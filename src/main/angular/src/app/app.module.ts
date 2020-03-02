@@ -16,7 +16,9 @@ import { AddanimalComponent } from './addanimal/addanimal.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { FormsModule } from '@angular/forms';
-import { EmployeComponent } from './employe/employe.component'
+import { EmployeComponent } from './employe/employe.component';
+import { InscriptionComponent } from './inscription/inscription.component';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { EmployeComponent } from './employe/employe.component'
     SecteurComponent,
     AddanimalComponent,
     ConnexionComponent,
-    EmployeComponent
+    EmployeComponent,
+    InscriptionComponent
   ],
   imports: [
     BrowserModule,

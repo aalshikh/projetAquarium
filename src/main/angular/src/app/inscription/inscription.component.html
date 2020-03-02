@@ -1,0 +1,23 @@
+<!-- <form  class="form-example">
+    <div class="form-example">
+      <label for="pseudo">Pseudo:</label>
+      <input type="text" name="name" id="name" placeholder="" (input)="pseudo($event)" required>
+    </div>
+    <div class="form-example">
+      <label for="password">Mot de passe:</label>
+      <input type="text" name="password" id="password" placeholder="" (input)="password($event)" required>
+    </div>
+    <div class="form-example">
+      <button type="button" (click)="inscription()">Inscrivez-vous en tant qu'employe</button>
+    </div>
+  </form> -->
+  
+<div class="div">
+    <form [formGroup]="formGroupAjout">
+        <input type="text" placeholder="pseudo" required="required" formControlName="pseudo"/>
+        <br>
+        <input type="text" placeholder="mdp" required="required" formControlName="mdp"/>
+        
+        <button (click)="inscription()" type="submit">inscription en tant qu'employe</button>
+    </form>
+</div>
