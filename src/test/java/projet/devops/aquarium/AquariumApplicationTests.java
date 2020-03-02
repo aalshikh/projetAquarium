@@ -37,7 +37,7 @@ class AquariumApplicationTests {
 			Assert.fail();
 		} catch (HttpClientErrorException ex) {
 			//Verify bad request and missing header
-			Assert.assertEquals(400, ex.getRawStatusCode());
+			Assert.assertEquals(400,403, ex.getRawStatusCode());
 			Assert.assertEquals(false, ex.getResponseBodyAsString().contains("Missing request header"));
 		}
 	}
@@ -58,7 +58,7 @@ class AquariumApplicationTests {
 			catch(HttpClientErrorException ex)
 			{
 				//Verify bad request and missing header
-				Assert.assertEquals(404, ex.getRawStatusCode());
+				Assert.assertEquals(404,403, ex.getRawStatusCode());
 				Assert.assertEquals(false, ex.getResponseBodyAsString().contains("Missing request header"));
 			}
 		}
@@ -81,7 +81,7 @@ class AquariumApplicationTests {
 		catch(HttpClientErrorException ex)
 		{
 			//Verify bad request and missing header
-			Assert.assertEquals(415, ex.getRawStatusCode());
+			Assert.assertEquals(415,403, ex.getRawStatusCode());
 			Assert.assertEquals(false, ex.getResponseBodyAsString().contains("Missing request header"));
 		}
 	}
@@ -104,7 +104,7 @@ class AquariumApplicationTests {
 		catch(HttpClientErrorException ex)
 		{
 			//Verify bad request and missing header
-			Assert.assertEquals(405, ex.getRawStatusCode());
+			Assert.assertEquals(405,403, ex.getRawStatusCode());
 			Assert.assertEquals(false, ex.getResponseBodyAsString().contains("Missing request header"));
 		}
 	}
@@ -127,7 +127,7 @@ class AquariumApplicationTests {
 		catch(HttpClientErrorException ex)
 		{
 			//Verify bad request and missing header
-			Assert.assertEquals(405, ex.getRawStatusCode());
+			Assert.assertEquals(405,403, ex.getRawStatusCode());
 			Assert.assertEquals(false, ex.getResponseBodyAsString().contains("Missing request header"));
 		}
 	}
@@ -150,7 +150,7 @@ class AquariumApplicationTests {
 		catch(HttpClientErrorException ex)
 		{
 			//Verify bad request and missing header
-			Assert.assertEquals(405, ex.getRawStatusCode());
+			Assert.assertEquals(405, 403, ex.getRawStatusCode());
 			Assert.assertEquals(false, ex.getResponseBodyAsString().contains("Missing request header"));
 		}
 	}
