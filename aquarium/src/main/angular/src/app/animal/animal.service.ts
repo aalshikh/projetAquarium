@@ -18,4 +18,9 @@ export class AnimalService {
     deleteAnimal(id:number) : Observable<any> {
         return this.httpClient.delete('/Animals/' + id);
     }
+
+    createAnimal(animal:Animal) : Observable<any> {
+        return this.httpClient.post('/Animals', (animal));
+    }
+
 }

@@ -42,6 +42,9 @@ public class Animal {
     public Animal() {
     }
 
+    public Animal(int i, int i1, String en_forme, String s, String s1, String requin, String marto, String m, String cicatrice_a_la_tete, double v, Bassin b) {
+    }
+
 
     public int getId() { return id; }
 

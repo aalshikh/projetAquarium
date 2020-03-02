@@ -1,5 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { Animal } from "../animal/animal";
+import { AnimalService } from "../animal/animal.service";
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-animalespece',
@@ -8,11 +10,16 @@ import { Animal } from "../animal/animal";
 })
 export class AnimalespeceComponent implements OnInit {
 
+@Output()
+delete = new EventEmitter<Boolean>();
+
   @Input()
   private animaux:Array<Animal>;
   
   
   private _nomEspece:string;
+
+  
   @Input()
   set nomEspece(nom:string) {
     // update value
@@ -27,7 +34,7 @@ export class AnimalespeceComponent implements OnInit {
   
   private listeAnimauxEspece:Array<Animal>;
 
-  constructor() {
+  constructor(private animalService: AnimalService) {
     this.listeAnimauxEspece = [];
   }
 
@@ -45,4 +52,11 @@ export class AnimalespeceComponent implements OnInit {
     }
   }
 
+  supprimerAnimal(id:number){
+    this.animalService.deleteAnimal(id).subscribe(data => {
+      this.delete.emit(true);
+      
+    })
+    
+  }
 }

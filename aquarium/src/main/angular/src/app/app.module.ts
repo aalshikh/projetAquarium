@@ -12,6 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AnimalespeceComponent } from './animalespece/animalespece.component';
 import { BassinComponent } from './bassin/bassin.component';
 import { SecteurComponent } from './secteur/secteur.component';
+import { AddanimalComponent } from './addanimal/addanimal.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,12 +26,14 @@ import { SecteurComponent } from './secteur/secteur.component';
     AnimalComponent,
     AnimalespeceComponent,
     BassinComponent,
-    SecteurComponent
+    SecteurComponent,
+    AddanimalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

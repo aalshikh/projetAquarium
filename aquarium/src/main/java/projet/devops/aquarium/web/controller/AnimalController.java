@@ -50,10 +50,8 @@ public class AnimalController {
         return ResponseEntity.created(location).build();
     }
 
-   /* @DeleteMapping (value = "/Animals/{id}")
+   @DeleteMapping (value = "/Animals/{id}")
     public void supprimerAnimal(@PathVariable int id) {
-        animalDao.delete(id);
+        animalDao.deleteById(id);
     }
-
-    */
 }

@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { AnimalService } from "./animal.service";
 import { Animal } from "./animal";
 import { Bassin } from "../bassin/bassin";
+import { VirtualTimeScheduler } from 'rxjs';
 
 @Component({
   selector: 'app-animal',
@@ -14,6 +15,9 @@ export class AnimalComponent implements OnInit {
   private animaux:Array<Animal>;
   private especeAnimalPresente:Array<string>;
   private especeAnimalPresenteTmp:Array<string>;
+
+  
+
   constructor(private animalService: AnimalService) { 
     this.especeAnimalPresenteTmp = [];
   }
@@ -66,6 +70,27 @@ export class AnimalComponent implements OnInit {
 
   retourneEspece(){
     return this.nomEspece;
+  }
+
+  refresh(){
+    console.log(this.animaux);
+    this.especeAnimalPresente=[];
+    this.animaux=[];
+    this.especeAnimalPresenteTmp = [];
+    let last = this.nomEspece;
+    this.nomEspece = null;
+
+    this.animalService.getAllAnimaux().subscribe(data => {
+      this.animaux = data;
+      this.recupEspecePresent();
+      console.log("esp", this.especeAnimalPresenteTmp)
+
+      for(let i = 0; i < this.especeAnimalPresente.length; i++){
+        if(this.especeAnimalPresente[i] == last)
+          this.nomEspece = last;
+      }
+      console.log(this.animaux);
+    })
   }
 
 }

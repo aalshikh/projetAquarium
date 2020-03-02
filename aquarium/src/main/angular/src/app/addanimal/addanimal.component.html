@@ -1,0 +1,13 @@
+<form [formGroup]="formGroupAjout">
+    <input type="text" placeholder="espece animal" formControlName="espece"/>
+    <input type="text" placeholder="nom animal" formControlName="nom"/>
+    <input type="text" placeholder="sex animal" formControlName="sexe"/>
+    <input type="text" placeholder="signe animal" formControlName="signeDistinctif"/>
+    <input type="text" placeholder="bilan animal" formControlName="bilanSante"/>
+    <input type="date" placeholder="arrivee animal" formControlName="dateArr"/>
+    <input type="date" placeholder="depart animal" formControlName="dateDep"/>
+    <input type="text" placeholder="taille animal" formControlName="taille"/>
+    <input type="text" placeholder="age animal" formControlName="age"/>
+    <input type="text" placeholder="bassin animal" formControlName="bassin"/>
+    <button (click)="ajouterAnimal()" type="submit">ajouter</button>
+</form>

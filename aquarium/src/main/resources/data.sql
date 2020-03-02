@@ -6,6 +6,8 @@ INSERT INTO bassin VALUES(2, '2020-01-11' ,'roche a changer', 'Antre des anciens
 INSERT INTO bassin VALUES(3, '2020-01-11' ,'très bon etat', 'Bassin des bêtes des profondeurs', 5, 2, 1);
 
 INSERT INTO animal VALUES(1, 12, 'En forme' , '2018-01-09', '2021-01-09', 'Requin', 'Marto', 'M', 'cicatrice a la tete', 2.0, 1);
+
+INSERT INTO animal VALUES(5, 12, 'En forme' , '2018-01-09', '2021-01-09', 'Requin', 'Marto', 'M', 'cicatrice a la tete', 2.0, 1);
 INSERT INTO animal VALUES(2, 6, 'En forme' , '2019-01-09', '2022-01-09', 'Orque', 'Idé', 'M', 'tout noir', 1.80, 1);
 INSERT INTO animal VALUES(3, 46, 'En forme' , '2015-01-09', '2030-01-09', 'Tortue', 'Géniale', 'M', 'carapace marron clair', 0.90, 2);
 INSERT INTO animal VALUES(4, 3, 'En forme' , '2015-01-09', '2030-01-09', 'Poulpe', 'Inator', 'M', 'rouge et orange', 0.80, 3);
