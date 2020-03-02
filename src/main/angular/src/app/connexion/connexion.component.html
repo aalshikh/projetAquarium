@@ -1,0 +1,14 @@
+<form *ngIf ="connexionEtablie==false" class="form-example">
+  <div class="form-example">
+    <label for="pseudo">Pseudo:</label>
+    <input type="text" name="name" id="name" placeholder="" (input)="pseudo($event)" required>
+  </div>
+  <div class="form-example">
+    <label for="password">Mot de passe:</label>
+    <input type="password" name="password" id="password" placeholder="" (input)="password($event)" required>
+  </div>
+  <div class="form-example">
+    <button type="button" (click)="button()">Valider</button>
+  </div>
+</form>
+<div *ngIf ="connexionEtablie==true"><button type="button" (click)="deconnexion()">Deconnexion</button></div>

@@ -15,7 +15,7 @@ et {{listeAnimauxEspece}} -->
         <th scope="col">Taille</th>
         <th scope="col">Age</th>
         <th scope="col">Bassin</th>
-        <th scope="col">supprimer</th>
+        <th  *ngIf="verifConnexion == true"  scope="col">supprimer</th>
       </tr>
     </thead>
     <tbody>
@@ -31,7 +31,7 @@ et {{listeAnimauxEspece}} -->
           <td>{{a.taille}}</td>
           <td>{{a.age}}</td>
           <td>{{a.bassin.nomBassin}}</td>
-          <td>
+          <td  *ngIf="verifConnexion == true" >
             <button (click)="supprimerAnimal(a.id)">Supprimer</button>
           </td>
         </tr>

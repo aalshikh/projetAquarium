@@ -15,4 +15,4 @@ text-align: center; font-size: 25px;">Nos especes</p>
 <app-animalespece (delete)="refresh()" [animaux]=retourneAnimal() [nomEspece]=retourneEspece()></app-animalespece>
 <br>
 
-<app-addanimal></app-addanimal>
+<app-addanimal (create)="refresh()"></app-addanimal>

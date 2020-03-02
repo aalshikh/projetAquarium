@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AnimalService } from "../animal/animal.service";
 import { Animal } from "../animal/animal";
 import { ReactiveFormsModule, FormGroup, FormControl, FormBuilder } from '@angular/forms';
@@ -16,6 +16,9 @@ export class AddanimalComponent implements OnInit {
    private animal:Animal;
 
    formGroupAjout: FormGroup;
+
+   @Output()
+   create = new EventEmitter<Animal>();
 
   // constructor(private animalService: AnimalService, private formBuilder:FormBuilder) { }
   constructor(private formBuilder : FormBuilder, private animalService: AnimalService) { }
@@ -50,6 +53,7 @@ export class AddanimalComponent implements OnInit {
      
      this.animalService.createAnimal(this.animal).subscribe(data => {
        this.animal = data;
+       this.create.emit(this.animal);
        console.log(this.animal);
      })
    }

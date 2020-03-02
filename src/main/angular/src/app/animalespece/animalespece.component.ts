@@ -19,6 +19,8 @@ delete = new EventEmitter<Boolean>();
   
   private _nomEspece:string;
 
+
+  private verifConnexion=false;
   
   @Input()
   set nomEspece(nom:string) {
@@ -40,6 +42,7 @@ delete = new EventEmitter<Boolean>();
 
   ngOnInit() {
     this.filtreAnimauxEspece();
+    this.verifConnexion = JSON.parse(localStorage.getItem('pseudo'));
   }
 
   filtreAnimauxEspece(){

@@ -5,6 +5,8 @@ INSERT INTO bassin VALUES(1, '2020-01-11' ,'très bon etat', 'Bassin des monstre
 INSERT INTO bassin VALUES(2, '2020-01-11' ,'roche a changer', 'Antre des anciens et des sages', 20, 15, 2);
 INSERT INTO bassin VALUES(3, '2020-01-11' ,'très bon etat', 'Bassin des bêtes des profondeurs', 5, 2, 1);
 
+INSERT INTO employe VALUES(1, '123', 'alain');
+
 INSERT INTO animal VALUES(1, 12, 'En forme' , '2018-01-09', '2021-01-09', 'Requin', 'Marto', 'M', 'cicatrice a la tete', 2.0, 1);
 
 INSERT INTO animal VALUES(5, 12, 'En forme' , '2018-01-09', '2021-01-09', 'Requin', 'Marto', 'M', 'cicatrice a la tete', 2.0, 1);

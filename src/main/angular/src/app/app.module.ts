@@ -14,7 +14,9 @@ import { BassinComponent } from './bassin/bassin.component';
 import { SecteurComponent } from './secteur/secteur.component';
 import { AddanimalComponent } from './addanimal/addanimal.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { ConnexionComponent } from './connexion/connexion.component';
+import { FormsModule } from '@angular/forms';
+import { EmployeComponent } from './employe/employe.component'
 
 @NgModule({
   declarations: [
@@ -27,13 +29,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     AnimalespeceComponent,
     BassinComponent,
     SecteurComponent,
-    AddanimalComponent
+    AddanimalComponent,
+    ConnexionComponent,
+    EmployeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
