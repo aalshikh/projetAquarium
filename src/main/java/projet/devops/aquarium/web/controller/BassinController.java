@@ -9,6 +9,7 @@ import org.springframework.http.converter.json.MappingJacksonValue;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import projet.devops.aquarium.dao.BassinDao;
+import projet.devops.aquarium.model.Animal;
 import projet.devops.aquarium.model.Bassin;
 
 import java.net.URI;
@@ -31,6 +32,9 @@ public class BassinController {
         produitsFiltres.setFilters(listDeNosFiltres);
         return produitsFiltres;
     }
+
+    @GetMapping(value="/Bassins/{id}")
+    public Bassin afficherUnBassin(@PathVariable int id) { return bassinDao.findById(id);  }
 
     @PostMapping(value = "/Bassins")
     public ResponseEntity<Void> ajouterBassin(@RequestBody Bassin bassin) {

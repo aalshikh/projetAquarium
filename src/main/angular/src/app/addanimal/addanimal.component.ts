@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AnimalService } from "../animal/animal.service";
 import { Animal } from "../animal/animal";
+import { BassinService } from "../bassin/bassin.service";
+import { Bassin } from "../bassin/bassin";
 import { ReactiveFormsModule, FormGroup, FormControl, FormBuilder } from '@angular/forms';
 
 
@@ -14,8 +16,9 @@ export class AddanimalComponent implements OnInit {
 
   // @Input()
    private animal:Animal;
-
+  private bassins:Array<Bassin>;
    formGroupAjout: FormGroup;
+   private bassin:Bassin;
 
    @Output()
    create = new EventEmitter<Animal>();

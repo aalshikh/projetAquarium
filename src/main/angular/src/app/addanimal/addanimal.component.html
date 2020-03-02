@@ -9,5 +9,9 @@
     <input type="text" placeholder="taille animal" formControlName="taille"/>
     <input type="text" placeholder="age animal" formControlName="age"/>
     <input type="text" placeholder="bassin animal" formControlName="bassin"/>
+    
+    <!-- <select formControlName="bassin">
+      <option *ngFor="let bassin of bassins" [value]="bassin.id">{{bassin.id}}</option>
+    </select> -->
     <button (click)="ajouterAnimal()" type="submit">ajouter</button>
 </form>

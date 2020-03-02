@@ -14,4 +14,8 @@ export class BassinService {
     getAllBassins() : Observable<Array<Bassin>> {
         return this.httpClient.get<Array<Bassin>>('/Bassins');
     }
+
+    getOneBassin(id:number) : Observable<Bassin> {
+        return this.httpClient.get<Bassin>('/Bassins/' + id);
+    }
 }

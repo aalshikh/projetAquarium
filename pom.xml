@@ -104,7 +104,7 @@
 		<repository>
 			<id>internal.repo</id>
 			<name>Internal repo</name>
-			<url>file:///home/thara/testesb/in</url>
+			<url>file:///repo/alain</url>
 		</repository>
 	</distributionManagement>
 
